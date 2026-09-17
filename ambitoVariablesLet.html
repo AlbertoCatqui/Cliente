@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*let a1 = 1;
+      console.log("valor a1 (ámbito global): " + a1);
+      {
+        let a2 = 2;
+        console.log("valor a1 (ámbito global): " + a1);
+        console.log("valor a2 (ámbito de bloque): " + a2);
+      }
+      f();
+      function f() {
+        let a3 = 3;
+        console.log("valor a1 (ámbito global): " + a1);
+        console.log("valor a3 (ámbito función): " + a3);
+        if ((a3 = 3)) {
+          let a4 = 4;
+          console.log("valor a1 (ámbito global): " + a1);
+          console.log("valor a3 (ámbito funcion): " + a3);
+          console.log("valor a4 (ámbito de bloque) " + a4);
+        }
+      }*/
+      let a = 1;
+      console.log(1);
+      {
+        console.log(a);
+      }
+      (function () {
+        console.log(a);
+        if (true) {
+          console.log(a);
+        }
+      })();
+
+      console.log(
+        "-----------------------------------------------------------------",
+      );
+
+      let b = 1;
+      console.log(b);
+      (function () {
+        let b = 2;
+        console.log(b);
+        if (true) {
+          let b = 3;
+          console.log(b);
+        }
+        console.log(b);
+      })();
+      console.log(b);
+      b = 4; //let b = 4; no deja volver a declarar b
+
+      console.log(b);
+    </script>
+  </body>
+</html>
