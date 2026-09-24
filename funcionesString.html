@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(">charAt");
+      let texto = "texto de ejemplo";
+      for (let i = 0; i < texto.length; i++) {
+        console.log(texto.charAt(i));
+      }
+      console.log(">substr");
+      console.log(texto.substr(0, 5)); //Primer parámetro incio, segundo longitud
+      console.log(texto.substring(0, 5));
+      console.log(">split");
+      console.log(texto.split(" ")); //separa por los espacios
+    </script>
+  </body>
+</html>

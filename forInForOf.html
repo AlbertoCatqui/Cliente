@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("----For in Array----");
+      let frutas = ["manzana", "platano", "melocoton"];
+      for (const i in frutas) {
+        console.log("-" + i + " -> " + frutas[i]);
+      }
+      console.log("----For in Objeto----");
+      let comida = { Nombre: "manzana", tipo: "fruta", color: "rojo" };
+      for (const i in comida) {
+        console.log("-" + i + " -> " + comida[i]);
+      }
+      console.log("----For of Array----");
+      for (const element of frutas) {
+        console.log(element);
+      }
+      /*console.log("----For of Objeto----");
+      for (const element of objeto) {
+        console.log(element);
+      }*/
+    </script>
+  </body>
+</html>
