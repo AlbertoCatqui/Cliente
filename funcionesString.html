@@ -1,22 +1,57 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      console.log(">charAt");
-      let texto = "texto de ejemplo";
-      for (let i = 0; i < texto.length; i++) {
-        console.log(texto.charAt(i));
-      }
-      console.log(">substr");
-      console.log(texto.substr(0, 5)); //Primer parámetro incio, segundo longitud
-      console.log(texto.substring(0, 5));
-      console.log(">split");
-      console.log(texto.split(" ")); //separa por los espacios
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    console.log(">charAt");
+    let texto = "esto es un texto de ejemplo y efectivamente lo creas o no es un texto";
+    for (let i = 0; i < texto.length; i++) {
+      console.log(texto.charAt(i));
+    }
+
+    console.log(">substr");
+    console.log(texto.substr(0, 5)); //Primer parámetro incio, segundo longitud
+    console.log(texto.substring(0, 5));
+
+    console.log(">split");
+    console.log(texto.split(" ")); //separa por los espacios
+
+    console.log(">endsWith");
+    console.log(texto.endsWith("texto"));
+    console.log(texto.endsWith("textos"));
+
+    console.log(">startsWith");
+    console.log(texto.startsWith("esto"));
+    console.log(texto.startsWith("estos"));
+
+    console.log(">includes");
+    console.log(texto.includes("de"));
+    console.log(texto.includes("del"));
+
+    console.log(">match");
+    console.log(texto.match("ejemplo"));
+
+    console.log(">repeat");
+    console.log(texto.repeat(5));
+
+    console.log(">replace");
+    console.log(texto.replace("ejemplo", "cambio"));
+
+    console.log(">trim");
+    console.log(texto.trim());
+
+    console.log(">padstart");
+    console.log(texto.padStart(80, "-"));
+
+    console.log(">padend");
+    console.log(texto.padEnd(80, "-"));
+  </script>
+</body>
+
 </html>
