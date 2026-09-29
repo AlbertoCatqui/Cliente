@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fecha = Date();
+      const a = 1,
+        b = 2;
+      console.log(`Suma: ${a + b}`);
+      //String en varias lineas
+      const s = `linea1
+linea2`;
+      function suma(a, b, c, d) {
+        return a + b + c + d;
+      }
+      function foo(texto, p1, p2, p3) {
+        console.log(texto, p1, p2, p3);
+        return `La suma es: ${p1 + p2}`;
+      }
+      let res = foo`La suma de ${a} y ${b} es ${a + b}`;
+      console.log(res);
+      console.log(suma(1, 2)); //no lo hace
+      console.log(suma("tal", "cual")); //concatena los que le llegan
+    </script>
+  </body>
+</html>

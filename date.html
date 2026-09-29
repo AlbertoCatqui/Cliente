@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("----------Constructores----------");
+      console.log(">Constructor vacío");
+      let fecha = new Date();
+      console.log(fecha);
+
+      console.log(">Constructor año-mes-dia");
+      console.log(new Date("2000-2-2"));
+
+      console.log(">Constructor año,mes,dia,...");
+      console.log(new Date(2000, 2, 2)); //MES EMPIEZA EN 0!!!!!!!!
+      console.log(new Date(2000, 2, 2, 16, 6, 57));
+
+      console.log(">Constructor Milisegundos");
+      console.log(new Date(1));
+
+      console.log("----------Funciones----------");
+      console.log(">Now");
+      console.log(Date.now(fecha));
+
+      console.log(">Parse");
+      console.log(Date.parse("2006-7-4"));
+
+      console.log(">GetFullYear");
+      console.log(fecha.getFullYear());
+      fecha.setFullYear("1995");
+      console.log(fecha.getFullYear());
+
+      console.log(">GetMonth");
+      console.log(fecha.getMonth());
+      fecha.setMonth("12");
+      console.log(fecha.getMonth());
+
+      console.log(">GetDay");
+      console.log(fecha.getDay()); //Devuelve un numero de 0(Domingo) a 6. No tiene set
+
+      console.log(">GetDate");
+      console.log(fecha.getDate());
+      fecha.setDate("6");
+      console.log(fecha.getDate());
+
+      console.log(">GetHours");
+      console.log(fecha.getHours());
+      console.log(fecha.setHours("13"));
+      console.log(fecha.getHours());
+
+      console.log(">GetMinutes");
+      console.log(fecha.getMinutes());
+      console.log(fecha.setMinutes("27"));
+      console.log(fecha.getMinutes());
+
+      console.log(">GetMilliseconds");
+      console.log(fecha.getMilliseconds());
+      console.log(fecha.setMilliseconds("750"));
+      console.log(fecha.getMilliseconds());
+
+      console.log(">GetTime");
+      console.log(fecha.getTime());
+      console.log(fecha.setTime(750915325480));
+      console.log(fecha.getTime());
+    </script>
+  </body>
+</html>
