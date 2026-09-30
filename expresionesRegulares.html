@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(/^hello/.test("hola mundo")); //empieza por hello
+      console.log(/world$/.test("hola mundo")); //acaba por world
+      console.log(/^h.*o$/.test("hola mundo")); //hempieza por h, despues tiene 0 o mas caracteres y acaba con o
+      console.log(/[0-9]/.test("hola mundo")); //empieza por un numero del 0 al 9
+      console.log(/[u-v]/.test("hola mundo"));
+    </script>
+  </body>
+</html>
+// barra d,w,s,0,n y .
