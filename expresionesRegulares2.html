@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex</title>
+</head>
+
+<body>
+    <script>
+        //\d si hay un dígito
+        console.log(/\d/.test("hola 2024")); // true
+        console.log(/\d/.test("hola mundo")); // false
+
+        //\D  si no hay un dígito
+        console.log(/\D/.test("123")); // false
+        console.log(/\D/.test("12a3")); // true
+
+        //\w si hay letra, número o guion bajo
+        console.log(/\w/.test("hola")); // true
+        console.log(/\w/.test("_")); // true
+        console.log(/\w/.test("!!!")); // false
+
+        //\W  si no hay letra, número ni guion bajo
+        console.log(/\W/.test("hola")); // false
+        console.log(/\W/.test("hola mundo")); // true (el espacio)
+
+        //\s si hay espacio en blanco
+        console.log(/\s/.test("hola mundo")); // true
+        console.log(/\s/.test("holamundo")); // false
+
+        //\S  si no hay espacio en blanco
+        console.log(/\S/.test("   ")); // false
+        console.log(/\S/.test("  a ")); // true
+
+        //\0 si es carácter nulo
+        console.log(/\0/.test("a\0b")); // true
+        console.log(/\0/.test("hola 0")); // false
+
+        //\n si hay un salto de línea
+        console.log(/\n/.test("linea1\nlinea2")); // true
+        console.log(/\n/.test("hola mundo")); // false
+
+        //. cualquier carácter menos salto de línea
+        console.log(/./.test("a")); // true
+        console.log(/./.test("")); // false
+        console.log(/./.test("\n")); // false
+        console.log(/^h.la$/.test("hola")); // true
+    </script>
+</body>
+
+</html>
