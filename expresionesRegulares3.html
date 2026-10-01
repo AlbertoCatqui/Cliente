@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(/^a\d?/.test("abc"));
+      console.log(/^a\d?/.test("ab3"));
+      console.log(/^a\d/.test("abc"));
+      console.log(/^a\d/.test("ab3"));
+      console.log(/\d{3}/.test("h34a"));
+      console.log(/\d{3}/.test("h346a"));
+      console.log(/[a-c]{3,}/.test("--cab--")); //Al menos hay 3 caracteres a-c seguidos
+      console.log(/[a-c]{3,7}/.test("--cab--")); //Hay de 3 a 7 caracteres a-c seguidos
+      console.log(/^[0-9]{8}[A-Z]$/.test("12345678A")); //DNI
+      console.log(/^a.*a$/.test("a34a")); //empieza por a y acaba con a, teniendo en medio 0 o mas caracteres
+      console.log("-------------------");
+      console.log(/^[a-c]{3,9}.*[a-c]{3,9}$/.test("abc"));
+      console.log(/^[a-c]{3,9}.*[a-c]{3,9}$/.test("abclabc"));
+      console.log(/^[a-c]{3,9}.*[a-c]{3,9}$/.test("abcabc"));
+      console.log(/^[a-c]{3,9}.*[a-c]{3,9}$/.test("abcabclabcabc"));
+      console.log(/^[a-c]{3,9}.*[a-c]{3,9}$/.test("abcabcabcabc"));
+
+      //empiece entre 3 y 9 letras abc y temine entre 3 y 9 letras abc
+      //abc true
+      //abclabc true
+      //abcabclabcabc true
+      //abcabcabcabc true
+    </script>
+  </body>
+</html>
