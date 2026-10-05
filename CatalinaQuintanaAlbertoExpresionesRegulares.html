@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function comprobar(titulo, dato, expr) {
+            let valido = expr.test(dato);
+            console.log(titulo + ": " + dato + " es " + valido);
+            if (!valido) {
+                alert("El campo " + titulo + " no cumple con las especificaciones");
+            }
+            return valido;
+        }
+
+        let nombre = prompt("Nombre:", "Pepe");
+        let apellidos = prompt("Apellidos:", "Sánchez Vallejo");
+        let edad = prompt("Edad:", "30");
+        let email = prompt("Email:", "pepesanvall@test.mod");
+        let telefono = prompt("Teléfono:", "612123123");
+        let centro = prompt("Centro:", "IES Julián Marías");
+        let curso = prompt("Curso (1 o 2):", "1");
+        let observaciones = prompt("Observaciones:", "Tal");
+        let anio = prompt("Año:", "2026");
+
+        comprobar("Nombre", nombre, /^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{1,}$/);
+        comprobar("Apellidos", apellidos, /^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]{1,}( [A-ZÁÉÍÓÚÑ][a-záéíóúñ]{1,}){0,}$/);
+        comprobar("Edad", edad, /^\d{1,3}$/);
+        comprobar("Email", email, /^[\w.-]{1,}@[a-zA-Z0-9]{1,}\.[a-zA-Z]{2,3}$/);
+        comprobar("Teléfono", telefono, /^[69]\d{8}$/);
+        comprobar("Centro", centro, /^.{5,120}$/);
+        comprobar("Curso", curso, /^[12]$/);
+        comprobar("Observaciones", observaciones, /^[\wáéíóúñÁÉÍÓÚÑ ]{1,120}$/);
+        comprobar("Año", anio, /^(19|20)\d{2}$/);
+    </script>
+</body>
+
+</html>
