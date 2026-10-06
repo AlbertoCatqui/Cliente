@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numeros = [
+        4, 0, 3, 4, 7, 3, 5, 8, 1, 8, 8, 0, 2, 3, 1, 2, 5, 7, 3, 2, 5,
+      ];
+
+      let numerosFiltrados = [];
+
+      for (let i = 0; i < numeros.length; i++) {
+        if (numerosFiltrados.indexOf(numeros[i]) == -1) {
+          numerosFiltrados.push(numeros[i]);
+        }
+      }
+      numerosFiltrados.sort();
+      for (let i = 0; i < numerosFiltrados.length; i++) {
+        document.body.innerHTML += numerosFiltrados[i] + " ";
+      }
+    </script>
+  </body>
+</html>
