@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let diasSemana = [
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Miercoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+      ];
+      for (let i = 1; i <= 5; i++) {
+        const date1 = new Date(2026 + i + "-02-2");
+        console.log(
+          "Mi cumpleaños en " +
+            (2026 + i) +
+            " cae en " +
+            diasSemana[date1.getDay()],
+        );
+      }
+    </script>
+  </body>
+</html>
