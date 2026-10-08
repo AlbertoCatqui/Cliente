@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fecha1 = new Date();
+      let fecha2 = new Date("2027-02-2");
+
+      if (fecha1 > fecha2) {
+        console.log(
+          "La diferencia en dias entre las fechas es:" +
+            Math.floor(1000 * 60 * 60 * 24 * (fecha1 - fecha2)),
+        );
+      } else if (fecha2 > fecha1) {
+        console.log(
+          "La diferencia en dias entre las fechas es:" +
+            Math.floor((fecha2 - fecha1) / (1000 * 60 * 60 * 24)),
+        );
+      } else {
+        console.log("Son la misma fecha");
+      }
+    </script>
+  </body>
+</html>
