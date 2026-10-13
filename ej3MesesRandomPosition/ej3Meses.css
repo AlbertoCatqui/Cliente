@@ -1,0 +1,6 @@
+div {
+  position: fixed;
+  border: solid 1px black;
+  width: 100px;
+  height: 30px;
+}

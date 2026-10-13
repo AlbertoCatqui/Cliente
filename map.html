@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let tal = new Map();
+      let tal2 = new Map([
+        [1, 2],
+        [3, 4],
+        [5, 6],
+      ]);
+      tal.set("a", 1);
+      tal.set("b", 2);
+      tal.set("c", 3);
+      console.log(tal.get("a"));
+      console.log(tal.has("b"));
+      tal.delete("b");
+      console.log(tal.has("b"));
+      console.log(tal.values());
+      console.log(tal.keys());
+      console.log(tal.entries());
+      tal.clear();
+      console.log(tal.entries());
+    </script>
+  </body>
+</html>
