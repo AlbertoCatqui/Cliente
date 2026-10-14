@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [100, 23, 23, 23, 23, 67, 45];
+      let outputarray = [];
+      let outputArraySet = [];
+      //Comprueba si en outputarray existe cada uno de los valores de array. si no existe lo mete
+      for (let i = 0; i < array.length; i++) {
+        if (!outputarray.includes(array[i])) {
+          outputarray.push(array[i]);
+        }
+      }
+      //Itera el nuevo array sin repeticiones
+      console.log("--Filtrado a mano--");
+      for (let i = 0; i < outputarray.length; i++) {
+        console.log(outputarray[i]);
+      }
+      //crea un set a partir del array original con Array.from()
+      outputArraySet = Array.from(new Set(array));
+      //Itera el array creado
+      console.log("--Creado a partir de Set--");
+      for (let i = 0; i < outputArraySet.length; i++) {
+        console.log(outputArraySet[i]);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function suma(...tal) {
+        let result = 0;
+        for (const a of tal) {
+          result += a;
+        }
+        return result;
+      }
+      console.log(suma(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+      function añadirApellido(nombre, ...apellidos) {
+        let result = nombre;
+        for (const i in apellidos) {
+          result += " " + apellidos[i];
+        }
+        return result;
+      }
+      console.log(añadirApellido("Pedro"));
+      console.log(añadirApellido("Luis", "Ruiz"));
+
+      console.log(añadirApellido("Ana", "Gil", "Sanz"));
+
+      let values = [1, 2, 3];
+      console.log(values);
+      let copy = [...values];
+      console.log(copy);
+      let morevalues = [4, 5];
+      values.push(...morevalues);
+      console.log(values);
+      let other = [0, ...morevalues];
+      console.log(other);
+    </script>
+  </body>
+</html>

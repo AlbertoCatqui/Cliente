@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function f1(nombre, edad) {
+        console.log(nombre + "-" + edad);
+      }
+      f1("pepe");
+      f1("pepe", 30, "pllp");
+
+      //parametros utilizando "arguments"
+      function f2(nombre, edad) {
+        console.log(arguments[0] + "-" + arguments[1]);
+      }
+      f2("pepe");
+      f2("pepe", 30, "papsad");
+
+      function f3(nombre = "Benito", edad = 21) {
+        console.log(nombre + "-" + edad);
+      }
+      f3("pepe");
+      f3();
+    </script>
+  </body>
+</html>

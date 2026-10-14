@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let tal = new Set();
+      tal.add("Hola");
+      tal.add("Hola");
+      tal.add("buenas");
+      tal.add("tardes");
+      tal.add("Adios");
+
+      for (let valor of tal.values()) {
+        console.log(valor);
+      }
+
+      console.log(tal.values());
+      tal.delete("Adios");
+      console.log(tal.values());
+      console.log(tal.has("buenas"));
+      tal.clear();
+      console.log(tal.values());
+    </script>
+  </body>
+</html>
