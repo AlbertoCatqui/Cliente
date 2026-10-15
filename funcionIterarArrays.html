@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("-------.. FOREACH ..-------");
+
+      let a = ["a", "b", "c"];
+
+      console.log("-----Funcion Normal-----");
+      //Funcion normal
+      a.forEach(function (e) {
+        console.log(e);
+      });
+
+      console.log("-----Funcion Flecha-----");
+
+      //Funcion flecha
+      a.forEach((i) => console.log(i));
+
+      console.log("-----Valor, Indice, array funcion anónima-----");
+
+      //Valor, indice, array
+      a.forEach(function (o, u, a) {
+        console.log(o);
+      });
+
+      console.log("-------.. MAP ..-------");
+
+      let b = [1, 2, 3];
+      console.log(b.map((e) => e + 1));
+      let tal = b.map((e) => e + (1 + b[1]));
+      console.log(tal);
+      let tal2 = b.map((e) => e + (1 + b[1] + b.indexOf(b[e])));
+      console.log(tal2);
+
+      console.log("-------.. REDUCE ..-------");
+
+      let c = [0, 1, 2, 3];
+
+      let reduceEjemplo = c.reduce(function (a, b) {
+        return a + b;
+      });
+      console.log(reduceEjemplo);
+
+      let reduceRightEjemplo = c.reduceRight(function (a, b) {
+        return a - b;
+      });
+      console.log(reduceRightEjemplo);
+
+      console.log("-------.. FILTER ..-------");
+
+      let d = ["a", "aa", "aaa", "aaaa", "aaaaa"];
+      let palabrasMasDe2 = d.filter((palabra) => palabra.length > 2);
+      console.log(palabrasMasDe2);
+
+      console.log("-------.. EVERY ..-------");
+
+      let e = [3, 6, 9, 12, 15];
+      let div3 = e.every((valor) => valor % 3 == 0);
+      console.log(div3);
+
+      console.log("-------.. some ..-------");
+
+      let f = [3, 6, 9, 12, 15];
+      let div2 = f.some((valor) => valor % 2 == 0);
+      console.log(div2);
+    </script>
+  </body>
+</html>

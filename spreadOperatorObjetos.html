@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let persona = {
+        nombre: "Pepe",
+        edad: 27,
+      };
+      let cliente = {
+        ventas: 120,
+        ...persona,
+      };
+      console.log(cliente);
+      persona.nombre = "Laura";
+      console.log(persona);
+      console.log(cliente);
+      let cliente2 = { ...persona };
+      persona.nombre = "Alberto";
+      console.log(persona);
+      console.log(cliente2);
+    </script>
+  </body>
+</html>
