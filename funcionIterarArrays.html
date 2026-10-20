@@ -40,13 +40,16 @@
 
       console.log("-------.. REDUCE ..-------");
 
-      let c = [0, 1, 2, 3];
-
+      let c = [10, 20, 30];
       let reduceEjemplo = c.reduce(function (a, b) {
         return a + b;
       });
       console.log(reduceEjemplo);
-
+      console.log(c.reduce((ac) => ac));
+      console.log(c.reduce((ac, n) => ac + n));
+      
+      console.log("-------.. REDUCE RIGHT ..-------");
+      s;
       let reduceRightEjemplo = c.reduceRight(function (a, b) {
         return a - b;
       });
