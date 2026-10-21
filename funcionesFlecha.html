@@ -1,32 +1,30 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-</head>
-
-<body>
-  <script>
-    let esVocal = (letra) => {
-      if (
-        letra == "a" ||
-        letra == "e" ||
-        letra == "i" ||
-        letra == "o" ||
-        letra == "u"
-      ) {
-        console.log("Es vocal");
-        return true;
-      } else {
-        console.log("No es vocal");
-        return false;
-      }
-    };
-    esVocal("a");
-    esVocal("x");
-  </script>
-</body>
-
+  <body>
+    <script>
+      let esVocal = (letra) => {
+        if (
+          letra == "a" ||
+          letra == "e" ||
+          letra == "i" ||
+          letra == "o" ||
+          letra == "u"
+        ) {
+          console.log("Es vocal");
+          return true;
+        } else {
+          console.log("No es vocal");
+          return false;
+        }
+      };
+      esVocal("a");
+      esVocal("x");
+    </script>
+  </body>
 </html>
