@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let sucesion = [];
+      function fibonacci(longitud) {
+        let primero = 1;
+        let segundo = 0;
+        for (let i = 0; i < longitud; i++) {
+          if (i == 0 || i == 1) {
+            sucesion.push(primero);
+          } else {
+            primero = sucesion[i - 1];
+            segundo = sucesion[i - 2];
+            let suma = primero + segundo;
+            sucesion.push(suma);
+          }
+        }
+      }
+      fibonacci(15);
+      console.log(sucesion);
+    </script>
+  </body>
+</html>
