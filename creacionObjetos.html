@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = { name: "Pepe", age: 23 };
+      let student = Object.create(person);
+      student.course = "A";
+      let customer = Object.create(person);
+      customer.sales = 1230;
+      console.log(person);
+      console.log(student);
+      console.log(customer);
+      for (const key in customer) {
+        console.log(key);
+      }
+      let data = { height: 170 };
+
+      let student2 = Object.assign({}, person, data);
+      console.log(student2);
+    </script>
+  </body>
+</html>

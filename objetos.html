@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let propiedad1 = "edad";
+      let valor = 20;
+      const propiedad2 = "trabajador";
+      let persona = {
+        nombre: "Pepe",
+        [propiedad1]: valor,
+        [propiedad2]: true,
+      };
+      console.log(persona);
+
+      let cliente = {
+        nombre: "pepe",
+        saldo: 1000,
+        credito: true,
+      };
+      for (const key in cliente) {
+        console.log(`Propiedad: ${key} - Valor: ${cliente[key]}`);
+      }
+      console.log("nombre" in cliente);
+      console.log("apellido" in cliente);
+      let copia1 = { ...cliente };
+      console.log(copia1);
+      let copia2 = { apellido: "García", ...cliente };
+      console.log(copia2);
+      let copia3 = Object.assign(cliente);
+      console.log(copia3);
+      let copia4 = {};
+      Object.assign(copia4, cliente);
+      console.log(copia4);
+    </script>
+  </body>
+</html>

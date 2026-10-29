@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = { name: "Pepe", age: 20 };
+      let student = { course: "A" };
+      console.log(
+        Object.getPrototypeOf(person) == Object.getPrototypeOf(student),
+      );
+
+      console.log(student.name);
+
+      Object.setPrototypeOf(student, person);
+      console.log(student.name);
+
+      student.name = "Julian";
+      console.log(student.name);
+      console.log(person.name);
+    </script>
+  </body>
+</html>
