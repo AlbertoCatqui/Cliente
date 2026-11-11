@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("tal");
+      /* Queremos obtener por la pantalla del navegador una relación de algunas comunidades autónomas y algunas de sus provincias
+              Castilla y Leon: Valladolid Burgos León Palencia
+              Valencia: Valencia Alincante
+              Andalucía: Sevilla Córdoba Almería
+
+              a- Definir los arrays necesarios con los datos
+              b- Recorrer los arrays para que se muestre lo de ariba
+              c- Hacer un recorrido como el del caso anterior pero mostrando solo las provincias que empiezan por "V" o "C" y en mayúsculas
+          */
+
+      let castillaYLeon = ["Valladolid", "Burgos", "León", "Palencia"];
+      let valencia = ["Valencia", "Alicante"];
+      let andalucia = ["Sevilla", "Córdoba", "Almería"];
+
+      function mostrarCom(comunidad, provincias) {
+        document.write("<h3>" + comunidad + "</h3>");
+        for (let prov of provincias) {
+          document.write(prov + "<br>");
+        }
+      }
+
+      mostrarCom("Castilla y León", castillaYLeon);
+      mostrarCom("Valencia", valencia);
+      mostrarCom("Andalucía", andalucia);
+
+      function filtrado(comunidad, provincias) {
+        let filtradas = provincias.filter(
+          (prov) => prov.startsWith("V") || prov.startsWith("C"),
+        );
+        document.write("<h3>" + comunidad + " (filtrado):</h3>");
+        for (let prov of filtradas) {
+          document.write(prov + "<br>");
+        }
+      }
+      filtrado("Castilla y León", castillaYLeon);
+      filtrado("Valencia", valencia);
+      filtrado("Andalucía", andalucia);
+    </script>
+  </body>
+</html>
