@@ -40,7 +40,7 @@ export class Edificio {
         );
         console.log(
           nombre +
-            " es ahora el propietario de la puerta" +
+            " es ahora el propietario de la puerta " +
             puerta +
             " del piso " +
             planta,
@@ -52,7 +52,10 @@ export class Edificio {
             " del piso " +
             planta +
             " esta ocupada por " +
-            this.#plantas[planta][puerta - 1].getNombre(),
+            this.#plantas[planta][puerta - 1].getNombre() +
+            ", " +
+            nombre +
+            " no puede ser propietario de esa puerta.",
         );
       }
     } else {

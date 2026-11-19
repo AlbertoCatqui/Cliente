@@ -5,6 +5,7 @@ export class Inmobiliaria {
     this.#nombre = nombre;
     this.#edificios = [];
   }
+
   addEdificio(edificio) {
     this.#edificios.push(edificio);
     console.log(
@@ -19,6 +20,7 @@ export class Inmobiliaria {
         "®",
     );
   }
+
   getEdificio(calle, numero) {
     for (let i = 0; i < this.#edificios.length; i++) {
       if (
@@ -26,15 +28,16 @@ export class Inmobiliaria {
         this.#edificios[i].getNumero() == numero
       ) {
         return (
-          "El edificio" +
+          "El edificio " +
           this.#edificios[i].getCalle() +
           " en el numero " +
           this.#edificios[i].getNumero() +
-          " esta disponible en TecnoEdificio®"
+          " esta disponible en " +
+          this.#nombre +
+          "®"
         );
-      } else {
-        return "Este edificio no esta disponible en " + this.#nombre + "®";
       }
     }
+    return "Este edificio no esta disponible en " + this.#nombre + "®";
   }
 }
